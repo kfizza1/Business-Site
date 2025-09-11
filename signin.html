@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign In</title>
+    <style>
+        form{
+            width: 500px;
+            height: 500px;
+            padding: 25px;
+            padding-top: 60px;
+            margin: 15px auto;
+            background: rgb(235, 239, 243);
+            border-radius: 5px;
+            align-items: start;
+        }
+        h1{
+            text-align: center;
+            margin: 30px;
+        }
+        label{
+            margin-bottom: 5px;
+        }
+        input{
+            width: 100%;
+        }
+        @media screen and (max-width:550px) {
+            form{
+                width: 300px;
+                height: 400px;
+            }
+            #send{
+                width: 120px;
+            }
+            #emailText,
+            #passwordText{
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign In</h1>
+    <form id="submit" novalidate>
+        <label for="email">Email</label>
+        <input type="email" name="" id="email" required>
+        <small id="emailText"></small>
+        <label for="password">Password</label>
+        <input type="password" name="" id="password" required>
+        <small id="passwordText"></small>
+        <button id="send" type="submit">Sign Up</button>
+    </form>
+    <script>
+        const form = document.getElementById("submit");
+        const email = document.getElementById("email");
+        const emailText = document.getElementById("emailText");
+        const password = document.getElementById("password");
+        const passwordText = document.getElementById("passwordText");
+        const button = document.getElementById("send");
+
+        function formSubmit(event){
+            event.preventDefault();
+            let valid = true;
+            if(!email.value.includes("@") || !email.value.includes(".")){
+                valid = false;
+                emailText.textContent = "Invalid Email Address.";
+            }
+            else{
+                emailText.textContent = " ";
+            }
+            if(password.value.length < 6){
+                valid = false;
+                passwordText.textContent = "Password should be at least 6 characters.";
+            }
+            else{
+                passwordText.textContent = " "
+            }
+            if(valid){
+                form.reset();
+            }
+        }
+        button.onclick = formSubmit;
+    </script>
+</body>
+</html>

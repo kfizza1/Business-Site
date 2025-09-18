@@ -45,12 +45,13 @@ ul a{
     background: linear-gradient(purple, blue, pink);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
+    margin-bottom: 0 0 20px;
 font-size: 32px;
 }
-.home p{
+.paragraph{
     font-size: 14px;
     letter-spacing: 1px;
+    margin-bottom: 30px
 }
 button{
     margin: 20px;
@@ -111,9 +112,6 @@ button:hover a{
 }
 #pricing h1{
     margin-bottom: 15px;
-}
-.pricingP{
-    margin-bottom: 30px;
 }
 .priceCards{
     display: flex;
@@ -217,5 +215,8 @@ footer{
     .cards .card{
         width: 250px;
         height: 230px;
+    }
+    .paragraph{
+        font-size: 10px;
     }
 }

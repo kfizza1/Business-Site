@@ -210,7 +210,8 @@ footer{
         font-size: 25px;
     }
     .home p,
-    #features p{
+    #features p,
+    #pricing p{
         font-size: 12px;
     }
     #features{

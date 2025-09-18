@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+html{
+        -webkit-text-size-adjust: 100%;
+}
 body{
     min-height: 100vh;
     background-color: rgba(212, 215, 225, 0.951);

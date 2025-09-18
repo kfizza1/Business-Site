@@ -209,6 +209,10 @@ footer{
     h1{
         font-size: 25px;
     }
+    .home p,
+    #features p{
+        font-size: 10px;
+    }
     #features{
         padding: 0 15px;
     }

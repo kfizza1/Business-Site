@@ -245,7 +245,7 @@ footer{
     }
     .cards .card{
         width: 125px;
-        height: 160px;
+        height: auto;
         margin: 0 auto;
     }
     .card:last-child{

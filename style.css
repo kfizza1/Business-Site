@@ -216,6 +216,7 @@ footer{
     #pricing .card1{
         width: 45%;
         height: auto;
+        padding: 7px;
     }
 .card1 p{
     margin: 0;
